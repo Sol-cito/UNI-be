@@ -1,0 +1,11 @@
+FROM openjdk:17-jdk-slim
+
+MAINTAINER Sol
+
+COPY build/libs/*.jar uni-be.jar
+
+ENTRYPOINT ["java","-jar","uni-be.jar"]
+
+
+
+
