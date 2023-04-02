@@ -18,6 +18,21 @@ configurations {
     }
 }
 
+
+// only fat jar enable(executable)
+val jar: Jar by tasks
+jar.enabled = false
+
+
+sourceSets.main {
+    java.srcDirs("src/main/java", "src/main/kotlin")
+}
+
+// specify MainClass
+springBoot {
+    mainClass.set("com.uninteraction.UniBeApplicationKt")
+}
+
 repositories {
     mavenCentral()
 }
@@ -36,7 +51,12 @@ dependencies {
     runtimeOnly("com.mysql:mysql-connector-j")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    //mockk
+    testImplementation("io.mockk:mockk:1.13.4")
+    //kotest
+    testImplementation("io.kotest:kotest-runner-junit5-jvm:5.5.5")
 }
+
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
