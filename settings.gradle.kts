@@ -1,1 +1,1 @@
-rootProject.name = "uni_be"
+rootProject.name = "uni-be"
