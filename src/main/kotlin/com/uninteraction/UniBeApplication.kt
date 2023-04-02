@@ -1,4 +1,4 @@
-package com.uninteraction.uni_be
+package com.uninteraction
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

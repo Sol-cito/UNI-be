@@ -1,4 +1,4 @@
-package com.uninteraction.uni_be.controller
+package com.uninteraction.controller
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
